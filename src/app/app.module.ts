@@ -5,6 +5,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { DashboardProductComponent } from './dashboardProduct/dashboardProduct.component';
 import { DashboardProductsComponent } from './dashboardProducts/dashboardProducts.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SampleAppSelectComponent } from './select/select.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
 
@@ -16,6 +17,7 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
   	DashboardProductComponent,
   	DashboardProductsComponent,
   	NavbarComponent,
+    SampleAppSelectComponent,
   	SidebarComponent,
   	UIPagePathComponent
   ],
