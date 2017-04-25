@@ -1,0 +1,39 @@
+#navbar {
+	background-color: #303E4F;
+	height: 56px;
+	padding: 0 48px;
+
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#navbar > div {
+	display: flex;
+	flex-direction: row;
+}
+
+.select {
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	font-family: Roboto;
+	font-size: 16px;
+	overflow: auto;
+	padding-right: 19px;
+}
+
+button {
+	background-color: #34495e;
+	border: none;
+	border-radius: 50%;
+	height: 36px;
+	margin-right: 11px;
+	outline: none;
+	width: 36px;
+}
+
+button:last-of-type {
+	background-color: #8805c0;
+}

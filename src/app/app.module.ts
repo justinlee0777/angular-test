@@ -1,11 +1,22 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent }  from './app.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { DashboardProductsComponent } from './dashboardProducts/dashboardProducts.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
+
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+  	DashboardComponent,
+  	DashboardProductsComponent,
+  	NavbarComponent,
+  	SidebarComponent,
+  	UIPagePathComponent
+  ],
+  bootstrap:    [ DashboardComponent ]
 })
 export class AppModule { }
