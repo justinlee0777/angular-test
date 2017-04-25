@@ -1,7 +1,7 @@
 <div id=ui-page-path>
 	<div id=path-string>
-		<div *ngFor="let page of pages; let i = index;">
-			{{ page }}<span *ngIf="i < pages.length - 1">&nbsp;\&nbsp;</span>
+		<div *ngFor="let page of pages; let last = last">
+			{{ page }}<span *ngIf="!last">&nbsp;\&nbsp;</span>
 		</div>
 	</div>
 </div>

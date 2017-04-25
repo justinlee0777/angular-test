@@ -8,6 +8,7 @@
 }
 
 .section {
+	box-sizing: border-box;
 	font-family: Roboto;
 	font-size: 18px;
 	line-height: 2.67;

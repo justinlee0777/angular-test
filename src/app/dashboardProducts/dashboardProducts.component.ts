@@ -8,7 +8,7 @@ const PRODUCTS = new Array(9).fill({
 	selector: 'dashboard-products',
 	template: `
 		<div id=dashboard-products>
-			<div *ngFor="let dashboardProduct of products"></div>
+			<dashboard-product *ngFor="let dashboardProduct of products" [product]="dashboardProduct"></dashboard-product>
 		</div>
 	`,
 	styleUrls: [ './dashboardProducts.component.css' ]
