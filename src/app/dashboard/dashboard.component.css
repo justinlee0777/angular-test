@@ -13,4 +13,6 @@
 #dashboard-content {
 	background-color: #eeeeee;
 	flex: 1 1;
+	height: 100%;
+	overflow: auto;
 }

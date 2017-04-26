@@ -4,17 +4,17 @@
 	display: flex;
 	flex: 1;
 	flex-flow: row wrap;
-	height: 100%;
-	padding: 45px 45px 0;
+	justify-content: space-between;
+	margin: 45px 45px 0;
 	overflow: auto;
 }
 
 dashboard-product {
 	box-sizing: border-box;
 	padding: 26px 0 26px 26px;
-	width: 33%;
+	width: 32%;
 }
 
-dashboard-product:last-of-type {
-	padding-right: 26px;
+dashboard-product:nth-child(3n+3) {
+	margin-right: 26px;
 }
