@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
 		<div class=select>
 			<div class=name [ngClass]="{ focused: focused }" (click)="onClick()">{{ label }}</div>
 			<div class=dropdown [hidden]=!focused>
-				<div class=option *ngFor="let option of options" [routerLink]="[option.route]">{{ option.label }}</div>
+				<div class=option *ngFor="let option of options" (click)="onClickOption()" [routerLink]="[option.route]">{{ option.label }}</div>
 			</div>
 		</div>
 	`,
@@ -17,6 +17,7 @@ export class SampleAppSelectComponent {
 	@Input() options : SelectOptions;
 	focused: boolean = false;
 	onClick = () => this.focused = !this.focused;
+	onClickOption = () => this.focused = false;
 }
 
 interface SelectOptions {
