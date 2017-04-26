@@ -1,17 +1,22 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { DashboardProductComponent } from './dashboardProduct/dashboardProduct.component';
 import { DashboardProductsComponent } from './dashboardProducts/dashboardProducts.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SampleAppSelectComponent } from './select/select.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { StorefrontPreviewComponent } from './storefrontPreview/storefrontPreview.component';
 import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports: [
+    AppRoutingModule,
+    BrowserModule
+  ],
   declarations: [
   	DashboardComponent,
   	DashboardProductComponent,
@@ -19,6 +24,7 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
   	NavbarComponent,
     SampleAppSelectComponent,
   	SidebarComponent,
+    StorefrontPreviewComponent,
   	UIPagePathComponent
   ],
   bootstrap:    [ DashboardComponent ]

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 const storefrontLinks = [{
 		label: 'Theme',
-		onClick: () => console.log('noop')
+		route: 'dashboard'
 	}, {
 		label: 'Design',
-		onClick: () => console.log('noop')
+		route: 'dashboard'
 	}, {
 		label: 'Components',
-		onClick: () => console.log('noop')
+		route: 'storefront'
 }];
 
 @Component({
