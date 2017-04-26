@@ -14,7 +14,12 @@ import { Component, Input } from '@angular/core';
 })
 export class SampleAppSelectComponent {
 	@Input() label: string;
-	@Input() options;
+	@Input() options : SelectOptions;
 	focused: boolean = false;
 	onClick = () => this.focused = !this.focused;
+}
+
+interface SelectOptions {
+	label: string;
+	route?: string;
 }

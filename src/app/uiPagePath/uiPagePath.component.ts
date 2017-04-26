@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: [ './uiPagePath.component.css' ]
 })
 export class UIPagePathComponent {
-	pages: String = [ 'Storefront', 'Theme' ];
+	pages: String[] = [ 'Storefront', 'Theme' ];
 }

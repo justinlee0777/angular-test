@@ -5,6 +5,12 @@ import { Component, Input } from '@angular/core';
 	templateUrl: './dashboardProduct.component.html',
 	styleUrls: [ './dashboardProduct.component.css' ]
 })
+
 export class DashboardProductComponent {
-	@Input() product;
+	@Input() product : ProductModel;
+}
+
+interface ProductModel {
+	templateName: string;
+	content: string;
 }
