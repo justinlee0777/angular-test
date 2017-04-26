@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
 	styleUrls: [ './storefrontPreview.component.css' ]
 })
 
-export class StorefrontPreviewComponent {
-
-}
+export class StorefrontPreviewComponent {}

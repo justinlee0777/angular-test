@@ -1,0 +1,17 @@
+#storefront-preview {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+#content {
+	flex: 1 1;
+	text-align: center;
+}
+
+#side-menu {
+	width: 330px;
+	height: 100%;
+	background-color: #fafafa;
+	box-shadow: 0 0 6px 2px rgba(66, 66, 66, 0.1);
+}

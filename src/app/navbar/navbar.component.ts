@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 
 const storefrontLinks = [{
 		label: 'Theme',
-		route: 'dashboard'
+		route: 'dashboard/storefront/theme'
 	}, {
 		label: 'Design',
-		route: 'dashboard'
+		route: 'dashboard/storefront/theme'
 	}, {
 		label: 'Components',
-		route: 'storefront'
+		route: 'dashboard/storefront/component'
 }];
 
 @Component({
