@@ -6,9 +6,9 @@ import { StorefrontPreviewComponent } from './storefrontPreview/storefrontPrevie
 
 
 const routes : Routes = [
-	{ path: '', redirectTo: '/dashboard/storefront/theme', pathMatch: 'full' },
-	{ path: 'dashboard/storefront/theme', component: DashboardProductsComponent, pathMatch: 'full' },
-	{ path: 'dashboard/storefront/component', component: StorefrontPreviewComponent, pathMatch: 'full' }
+	{ path: '', redirectTo: '/theme', pathMatch: 'full' },
+	{ path: 'theme', component: DashboardProductsComponent },
+	{ path: 'component', component: StorefrontPreviewComponent }
 ];
 
 @NgModule({

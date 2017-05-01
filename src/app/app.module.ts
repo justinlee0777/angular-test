@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {APP_BASE_HREF} from '@angular/common';
+
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { DashboardProductComponent } from './dashboardProduct/dashboardProduct.component';
@@ -15,9 +17,9 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
 
 @NgModule({
   imports: [
-    AppRoutingModule,
     BrowserAnimationsModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   declarations: [
   	DashboardComponent,
@@ -29,6 +31,7 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
     StorefrontPreviewComponent,
   	UIPagePathComponent
   ],
-  bootstrap:    [ DashboardComponent ]
+  bootstrap:    [ DashboardComponent ],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}]
 })
 export class AppModule { }

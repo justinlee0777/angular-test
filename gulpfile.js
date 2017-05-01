@@ -1,4 +1,5 @@
-var del = require('del'),
+var historyFallback = require('connect-history-api-fallback'),
+	del = require('del'),
 	gulp = require('gulp'),
 	plugins = require('gulp-load-plugins')(),
 	pump = require('pump'),
@@ -49,6 +50,7 @@ function createServer() {
 			port: 3000,
 			root: ['build'],
 			livereload: true,
+			middleware: [ historyFallback() ],
 			open: true
 		})
 	]);
