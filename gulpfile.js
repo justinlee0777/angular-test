@@ -22,7 +22,8 @@ function bundle() {
 			extname: '.js'
 		}),
 		plugins.uglify(),
-		gulp.dest('build')
+		gulp.dest('build'),
+		plugins.livereload()
 		]);
 }
 
@@ -39,6 +40,9 @@ function compile() {
 }
 
 function createServer() {
+	plugins.livereload.listen();
+	gulp.watch('src/*.ts', [ 'load-js' ]);
+	gulp.watch([ 'src/**', '!src/**/*.js' ], [ 'move-assets' ]);
 	pump([
 		gulp.src( 'build' ),
 		plugins.webserver({
@@ -55,6 +59,7 @@ function moveAssets() {
 		gulp.src([ '**', '!**/*.js', '!**/*.ts' ], { cwd: 'src' }),
 		plugins.rename({ dirname: '' }),
 		plugins.flatten(),
-		gulp.dest('build')
+		gulp.dest('build'),
+		plugins.livereload()
 		]);
 }
