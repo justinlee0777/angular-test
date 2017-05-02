@@ -14,8 +14,7 @@ const storefrontLinks = [{
 
 @Component({
   selector: 'navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: [ './navbar.component.css' ]
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
 	storefrontLinks = storefrontLinks;

@@ -7,9 +7,10 @@ var historyFallback = require('connect-history-api-fallback'),
 
 var tsProject = plugins.typescript.createProject('tsconfig.json');
 
-gulp.task('build', ['load-js', 'move-assets']);
-gulp.task('bundle', [ 'compile' ], bundle);
-gulp.task('compile', compile);
+gulp.task('build', [ 'compile-sass', 'load-js', 'move-assets' ]);
+gulp.task('bundle', [ 'compile-js' ], bundle);
+gulp.task('compile-js', compileJS);
+gulp.task('compile-sass', compileSASS);
 gulp.task('load-js', [ 'bundle' ], clean);
 gulp.task('move-assets', moveAssets);
 gulp.task('serve', [ 'build' ], createServer);
@@ -32,7 +33,7 @@ function clean() {
 	del('tmp');
 }
 
-function compile() {
+function compileJS() {
 	return pump([
 		gulp.src(['src/*.ts', 'src/**/*.ts']),
 		tsProject(),
@@ -40,10 +41,22 @@ function compile() {
 		]);
 }
 
+function compileSASS() {
+	return pump([
+		gulp.src('src/**/*.scss'),
+		plugins.sass(plugins.sass().on('error', plugins.sass.logError)),
+		plugins.concatCss('styles.css'),
+		plugins.cleanCss({compatibility: 'ie8'}),
+		gulp.dest('build'),
+		plugins.livereload()
+		]);
+}
+
 function createServer() {
 	plugins.livereload.listen();
 	gulp.watch('src/*.ts', [ 'load-js' ]);
-	gulp.watch([ 'src/**', '!src/**/*.js' ], [ 'move-assets' ]);
+	gulp.watch('src/**/*.scss', [ 'compile-sass' ]);
+	gulp.watch([ 'src/**', '!src/**/*.scss', '!src/**/*.js' ], [ 'move-assets' ]);
 	pump([
 		gulp.src( 'build' ),
 		plugins.webserver({
@@ -58,7 +71,7 @@ function createServer() {
 
 function moveAssets() {
 	return pump([
-		gulp.src([ '**', '!**/*.js', '!**/*.ts' ], { cwd: 'src' }),
+		gulp.src([ '**', '!**/*.scss', '!**/*.js', '!**/*.ts' ], { cwd: 'src' }),
 		plugins.rename({ dirname: '' }),
 		plugins.flatten(),
 		gulp.dest('build'),

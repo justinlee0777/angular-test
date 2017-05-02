@@ -6,8 +6,7 @@ import { Router, RoutesRecognized } from '@angular/router';
 
 @Component({
 	selector: 'ui-page-path',
-	templateUrl: './uiPagePath.component.html',
-	styleUrls: [ './uiPagePath.component.css' ]
+	templateUrl: './uiPagePath.component.html'
 })
 export class UIPagePathComponent {
 	pages: String[] = [];

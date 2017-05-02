@@ -10,8 +10,7 @@ const PRODUCTS = new Array(9).fill({
 		<div id=dashboard-products>
 			<dashboard-product *ngFor="let dashboardProduct of products" [product]="dashboardProduct"></dashboard-product>
 		</div>
-	`,
-	styleUrls: [ './dashboardProducts.component.css' ]
+	`
 })
 export class DashboardProductsComponent {
 	products = PRODUCTS;

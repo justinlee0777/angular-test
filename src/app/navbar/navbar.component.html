@@ -1,10 +1,12 @@
 <div id=navbar>
 	<div>
-		<div class=select>Catalog</div>
-		<div class=select>Category</div>
-		<div class=select>Merchandize</div>
-		<div class=select>Marketing</div>
-		<sample-app-select label=Storefront [options]="storefrontLinks"></sample-app-select>
+		<md-select placeholder=Catalog><md-option>Dummy</md-option></md-select>
+		<md-select placeholder=Category><md-option>Dummy</md-option></md-select>
+		<md-select placeholder=Merchandize><md-option>Dummy</md-option></md-select>
+		<md-select placeholder=Marketing><md-option>Dummy</md-option></md-select>
+		<md-select placeholder=Storefront floatPlaceholder=false>
+			<md-option *ngFor="let option of storefrontLinks" [routerLink]="[option.route]">{{ option.label }}</md-option>
+		</md-select>
 	</div>
 	<div>
 		<button></button>

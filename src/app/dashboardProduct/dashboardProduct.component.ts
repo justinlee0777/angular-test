@@ -2,8 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'dashboard-product',
-	templateUrl: './dashboardProduct.component.html',
-	styleUrls: [ './dashboardProduct.component.css' ]
+	templateUrl: './dashboardProduct.component.html'
 })
 
 export class DashboardProductComponent {

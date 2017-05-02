@@ -1,0 +1,23 @@
+sidebar {
+	#sidebar {
+		background-color: #fafafa;
+		box-shadow: 0 0 6px 2px rgba(66, 66, 66, 0.1);
+		height: 100%;
+		position: relative;
+		width: 296px;
+		z-index: 1;
+	}
+
+	.section {
+		box-sizing: border-box;
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 2.67;
+		padding: 26px 45px;
+		width: 100%;
+	}
+
+	.header {
+		font-weight: bold;
+	}
+}

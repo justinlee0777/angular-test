@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdSelectModule } from '@angular/material';
 
 import {APP_BASE_HREF} from '@angular/common';
 
@@ -9,7 +10,6 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { DashboardProductComponent } from './dashboardProduct/dashboardProduct.component';
 import { DashboardProductsComponent } from './dashboardProducts/dashboardProducts.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SampleAppSelectComponent } from './select/select.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { StorefrontPreviewComponent } from './storefrontPreview/storefrontPreview.component';
 import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
@@ -19,6 +19,7 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    MdSelectModule,
     AppRoutingModule
   ],
   declarations: [
@@ -26,7 +27,6 @@ import { UIPagePathComponent } from './uiPagePath/uiPagePath.component';
   	DashboardProductComponent,
   	DashboardProductsComponent,
   	NavbarComponent,
-    SampleAppSelectComponent,
   	SidebarComponent,
     StorefrontPreviewComponent,
   	UIPagePathComponent

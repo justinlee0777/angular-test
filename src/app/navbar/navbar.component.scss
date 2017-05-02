@@ -1,0 +1,46 @@
+navbar {
+	#navbar {
+		background-color: #303E4F;
+		height: 56px;
+		line-height: 56px;
+		padding: 0 48px;
+
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#navbar > div {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+	}
+
+	.mat-select-trigger {
+		height: 100%;
+	}
+
+	.mat-select-placeholder {
+		color: white;
+	}
+
+	.mat-select-arrow, .mat-select-underline {
+		display: none !important;
+	}
+
+	button {
+		background-color: #34495e;
+		border: none;
+		border-radius: 50%;
+		height: 36px;
+		margin: auto;
+		margin-right: 11px;
+		outline: none;
+		width: 36px;
+	}
+
+	button:last-of-type {
+		background-color: #8805c0;
+	}
+}
