@@ -1,12 +1,10 @@
 <div id=navbar>
 	<div>
-		<md-select placeholder=Catalog><md-option>Dummy</md-option></md-select>
-		<md-select placeholder=Category><md-option>Dummy</md-option></md-select>
-		<md-select placeholder=Merchandize><md-option>Dummy</md-option></md-select>
-		<md-select placeholder=Marketing><md-option>Dummy</md-option></md-select>
-		<md-select placeholder=Storefront floatPlaceholder=false>
-			<md-option *ngFor="let option of storefrontLinks" [routerLink]="[option.route]">{{ option.label }}</md-option>
-		</md-select>
+		<dash-select placeholder=Catalog><div>Dummy</div></dash-select>
+		<dash-select placeholder=Category><div>Dummy</div></dash-select>
+		<dash-select placeholder=Merchandize><div>Dummy</div></dash-select>
+		<dash-select placeholder=Marketing><div>Dummy</div></dash-select>
+		<dash-select placeholder=Storefront [options]=storefrontLinks></dash-select>
 	</div>
 	<div>
 		<button></button>
